@@ -1,0 +1,11 @@
+Dziedzina: Fragment systemu "wspomagający" nauczanie studenta
+
+1.Przypadki użycia systemu
+
+2.Scenariusz i diagram przepływu
+
+Klasy i diagram sekwencji
+
+Stworzyć kod
+
+Zaproponować przypadki testowe. Przeprowadzic przez nie kod.
