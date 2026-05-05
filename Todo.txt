@@ -4,8 +4,8 @@ Dziedzina: Fragment systemu "wspomagający" nauczanie studenta
 
 2.Scenariusz i diagram przepływu
 
-Klasy i diagram sekwencji
+3.Klasy i diagram sekwencji
 
-Stworzyć kod
+4.Stworzyć kod
 
-Zaproponować przypadki testowe. Przeprowadzic przez nie kod.
+5.Zaproponować przypadki testowe. Przeprowadzic przez nie kod.
