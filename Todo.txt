@@ -1,10 +1,13 @@
+Projekt wykonany zgodnie z modelem iteracyjnym (n+1)
+
 Dziedzina: Fragment systemu "wspomagający" nauczanie studenta
 
 1.Przypadki użycia systemu
 
 2.Scenariusz i diagram przepływu
 
-3.Klasy i diagram sekwencji
+3a. Klasy 
+3b. Diagram sekwencji
 
 4.Stworzyć kod
 
