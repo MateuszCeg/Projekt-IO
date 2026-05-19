@@ -5188,8 +5188,8 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">12</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">1392</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">708</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">1348</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">688</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">320</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">334</XPD:ATTR>
 <XPD:REF name="Model">pMqG5vuJv0SaVChOtdmpdwAA</XPD:REF>
@@ -5338,7 +5338,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">12</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">1392,829;910,694</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">1348,811;910,692</XPD:ATTR>
 <XPD:REF name="Model">aOkCPMtMAUyNXDHr8CqGfwAA</XPD:REF>
 <XPD:REF name="Head">Vx+u8DxLS0KyEIBA20vYeQAA</XPD:REF>
 <XPD:REF name="Tail">e0m6guF8HUS/igbzeHyHVwAA</XPD:REF>
@@ -5509,7 +5509,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">12</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">1616,461;1577,708</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">1600,461;1546,688</XPD:ATTR>
 <XPD:REF name="Model">lee81/WKWUeRRw05aLZnugAA</XPD:REF>
 <XPD:REF name="Head">e0m6guF8HUS/igbzeHyHVwAA</XPD:REF>
 <XPD:REF name="Tail">QANbzl5dU0yY0R7HP3nRYAAA</XPD:REF>
@@ -5626,7 +5626,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">12</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">1392,872;323,862</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">1348,855;323,860</XPD:ATTR>
 <XPD:REF name="Model">2Fhz+yEiEUKVthKzgLirJgAA</XPD:REF>
 <XPD:REF name="Head">WcFGHcW2Mke0emWBJ4lHvQAA</XPD:REF>
 <XPD:REF name="Tail">e0m6guF8HUS/igbzeHyHVwAA</XPD:REF>
@@ -6254,10 +6254,10 @@
 <XPD:ATTR name="Name" type="string">getWydzial</XPD:ATTR>
 <XPD:REF name="Owner">A9TrzV2dg0mW9uyzjXBVSQAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="b2HbJh07m0q5sPNeWC4YXgAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="pgqPjzjH5EaeJgAN9GYJ3QAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">Wydzial*</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">3l72O7OuYU2RGkpqnBMOUwAA</XPD:REF>
-<XPD:REF name="Type_">kgS5GNAbg0+AJd/Z1aNkTQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[7]" type="UMLOperation" guid="JUMWI+x5jkCNAqRoEadrNgAA">
