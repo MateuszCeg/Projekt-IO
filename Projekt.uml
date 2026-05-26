@@ -6969,17 +6969,17 @@
 <XPD:ATTR name="Name" type="string">Zaloguj</XPD:ATTR>
 <XPD:REF name="Owner">bOGjnmYgHk29rEwZSzKtygAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">3</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="EYRlOWMrnkCOf/rOdAlEPQAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="9UVZyMyrSUOb0Nqx2SVXhQAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">void</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">char</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">J/oJ/9Q4mEe//9gnt4JFjQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="FNXQQmZbOUSVpV1VPm0JvgAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="pl89XTPQukmmHBP4t9qAmgAA">
 <XPD:ATTR name="Name" type="string">login</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">string</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">J/oJ/9Q4mEe//9gnt4JFjQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="6NKW1qBl0ECtiZ+ML7653gAA">
+<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="Cs+QTvz5uEa65r1RT2jWtQAA">
 <XPD:ATTR name="Name" type="string">haslo</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">string</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">J/oJ/9Q4mEe//9gnt4JFjQAA</XPD:REF>

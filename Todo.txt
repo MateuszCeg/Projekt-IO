@@ -12,3 +12,4 @@ Dziedzina: Fragment systemu "wspomagający" nauczanie studenta
 4.Stworzyć kod
 
 5.Zaproponować przypadki testowe. Przeprowadzic przez nie kod.
+Jednostkowy, integracyjne, systemowe
