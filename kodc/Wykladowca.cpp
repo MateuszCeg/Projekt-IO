@@ -13,8 +13,8 @@
 #include "Wykladowca.h"
 #include "Wyklad.h"
 #include "Materialy.h"
-#include <iostream>
-#include <algorithm> // Wymagane dla funkcji find()
+
+#include <algorithm>
 
 Wykladowca::Wykladowca(string imie, string nazwisko, string login, string haslo) : User(login, haslo) {
     this->Imie = imie;
@@ -49,29 +49,24 @@ void Wykladowca::setNazwisko(string nazwisko) {
 }
 
 void Wykladowca::dodajDoWykladu(Wyklad* wyklad) {
-    //dodawanie musi odbywać się na rzecz obiektu wykład!
-    for (Wyklad* wyk: this->ListaWykladow)
-    {
-        if (wyk == wyklad){
-            cout<<"Wykladowca ma juz przypisany ten wyklad." << endl;
-            return;
-        }
+    auto it = find(this->ListaWykladow.begin(), this->ListaWykladow.end(), wyklad);
+    if (it == this->ListaWykladow.end()) {
+        this->ListaWykladow.push_back(wyklad);
+        wyklad->dodajWykladowce(this);
     }
+}
 
-    this->ListaWykladow.push_back(wyklad);
+Wyklad* Wykladowca::utworzWyklad(Wydzial* wydzial, string nazwa) {
+    Wyklad* nowyWyklad = new Wyklad(nazwa, wydzial);
+    nowyWyklad->dodajWykladowce(this);
+    return nowyWyklad;
 }
 
 void Wykladowca::usunWyklad(Wyklad* wyklad) {
-    vector<Wyklad*> wyklady = this->ListaWykladow;
-    for (Wyklad* wyk: wyklady)
-    {
-        if (wyk == wyklad){
-            wyklady.erase(find(wyklady.begin(), wyklady.end(), wyklad));
-            return;
-        }
+    auto it = find(this->ListaWykladow.begin(), this->ListaWykladow.end(), wyklad);
+    if (it != this->ListaWykladow.end()) {
+        this->ListaWykladow.erase(it);
     }
-
-    cout<<"Wykladowca nie ma przypisanego tego wykladu." << endl;
 }
 
 vector<Materialy*> Wykladowca::przegladajMaterialy(Wyklad* wyklad) {
@@ -79,10 +74,10 @@ vector<Materialy*> Wykladowca::przegladajMaterialy(Wyklad* wyklad) {
 }
 
 void Wykladowca::dodajMaterialy(Wyklad* wyklad, Materialy* material) {
-    wyklad->dodajMaterial(material);
+    wyklad->dodajMaterialy(material);
 }
 
 void Wykladowca::usunMaterialy(Wyklad* wyklad, Materialy* material) {
-    wyklad->usunMaterial(material);
+    wyklad->usunMaterialy(material);
 }
 

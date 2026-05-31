@@ -9,10 +9,13 @@
 //
 //
 
+
 #include "Student.h"
 #include "Wyklad.h"
+
+#include <algorithm>
 #include <iostream>
-#include <algorithm> // Wymagane dla funkcji find()
+
 
 Student::Student(string imie, string nazwisko, int numerAlbumu, string haslo) : User(to_string(numerAlbumu), haslo) {
     this->Imie = imie;
@@ -21,7 +24,7 @@ Student::Student(string imie, string nazwisko, int numerAlbumu, string haslo) : 
 }
 
 Student::~Student() {
-    for (Wyklad* wyklad: this->ListaWykladow)
+    for (Wyklad* wyklad: this->getListaWykladow())
     {
         wyklad->usunStudenta(this);
     }
@@ -56,29 +59,28 @@ void Student::setNumerAlbumu(int numer) {
 }
 
 void Student::dodajDoWykladu(Wyklad* wyklad) {
-    //dodawanie musi odbywać się na rzecz obiektu wykład!
-    for (Wyklad* wyk: this->ListaWykladow)
-    {
-        if (wyk == wyklad){
-            cout<<"Student ma juz przypisany ten wyklad." << endl;
-            return;
-        }
+    auto it = find(this->ListaWykladow.begin(), this->ListaWykladow.end(), wyklad);
+    if (it == this->ListaWykladow.end()) {
+        this->ListaWykladow.push_back(wyklad);
+        wyklad->dodajStudenta(this);
     }
+}
 
-    this->ListaWykladow.push_back(wyklad);
+void Student::dolaczDoWykladu(Wyklad* wyklad, string haslo) {
+    if (wyklad->getHaslo() == haslo) {
+        this->dodajDoWykladu(wyklad);
+        cout << "Pomyslnie dolaczono do wykladu: " << wyklad->getNazwa() << endl;
+    } else {
+        cout << "Blad: Niepoprawne haslo do wykladu!" << endl;
+    }
 }
 
 void Student::usunWyklad(Wyklad* wyklad) {
-    vector<Wyklad*> wyklady = this->ListaWykladow;
-    for (Wyklad* wyk: wyklady)
-    {
-        if (wyk == wyklad){
-            wyklady.erase(find(wyklady.begin(), wyklady.end(), wyklad));
-            return;
-        }
-    }
 
-    cout<<"Student nie ma przypisanego tego wykladu." << endl;
+    auto it = find(this->ListaWykladow.begin(), this->ListaWykladow.end(), wyklad);
+    if (it != this->ListaWykladow.end()) {
+        this->ListaWykladow.erase(it);
+    }
 }
 
 vector<Materialy*> Student::przegladajMaterialy(Wyklad* wyklad) {

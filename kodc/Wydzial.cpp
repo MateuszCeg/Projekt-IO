@@ -11,7 +11,6 @@
 
 #include "Wydzial.h"
 #include "Wyklad.h"
-#include <iostream>
 
 Wydzial::Wydzial(string nazwa) {
     this->Nazwa = nazwa;
@@ -19,6 +18,7 @@ Wydzial::Wydzial(string nazwa) {
 
 Wydzial::~Wydzial() {
     for(Wyklad* wyk : this->ListaWykladow){
+        wyk->setWydzial(nullptr);
         delete wyk;
     }
 }
@@ -36,26 +36,18 @@ void Wydzial::setNazwa(string nazwa) {
 }
 
 void Wydzial::dodajNowyWyklad(Wyklad* wyklad) {
-    for (Wyklad* wyk: this->ListaWykladow)
-    {
-        if (wyk == wyklad){
-            cout<<"Wyklad jest juz przypisany." << endl;
-            return;
-        }
+    auto it = find(this->ListaWykladow.begin(), this->ListaWykladow.end(), wyklad);
+    if (it == this->ListaWykladow.end()) {
+        this->ListaWykladow.push_back(wyklad);
     }
-
-    this->ListaWykladow.push_back(wyklad);
 }
 
 void Wydzial::usunWyklad(Wyklad* wyklad) {
-    for (Wyklad* wyk: this->ListaWykladow)
-    {
-        if (wyk == wyklad){
-            delete wyk;
-            return;
-        }
+    auto it = find(this->ListaWykladow.begin(), this->ListaWykladow.end(), wyklad);
+    if (it != this->ListaWykladow.end()) {
+        Wyklad* doUsuniecia = *it;
+        this->ListaWykladow.erase(it);
+        delete doUsuniecia;
     }
-
-    cout<<"Brak wykladu do usuniecia." << endl;
 }
 

@@ -36,6 +36,7 @@ public:
 	void setNazwisko(string nazwisko);
 	void setNumerAlbumu(int numer);
 	void dodajDoWykladu(Wyklad* wyklad);
+    void dolaczDoWykladu(Wyklad* wyklad, string haslo);
 	void usunWyklad(Wyklad* wyklad);
 	vector<Materialy*> przegladajMaterialy(Wyklad* wyklad);
 private:

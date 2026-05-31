@@ -32,15 +32,19 @@ public:
     vector<Wykladowca*> getListaWykladowcow();
     vector<Materialy*> getListaMaterialow();
 	Wydzial* getWydzial();
+    string getHaslo();
 	void setNazwa(string nazwa);
+    void setHaslo(string haslo);
+    void setWydzial(Wydzial* wydzial);
 	void dodajStudenta(Student* student);
 	void usunStudenta(Student* student);
 	void dodajWykladowce(Wykladowca* wykladowca);
 	void usunWykladowce(Wykladowca* wykladowca);
-	void dodajMaterial(Materialy* materialy);
-	void usunMaterial(Materialy* materialy);
+    void dodajMaterialy(Materialy* materialy);
+    void usunMaterialy(Materialy* materialy);
 private:
 	string Nazwa;
+    string Haslo;
 	vector<Student*> ListaStudentow;
 	vector<Wykladowca*> ListaWykladowcow;
 	vector<Materialy*> ListaMaterialow;

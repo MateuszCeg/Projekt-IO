@@ -25,13 +25,13 @@ class Wydzial {
 public:
 	Wydzial(string nazwa);
 	~Wydzial();
-	string getNazwa();
+    string getNazwa();
 	vector<Wyklad*> getListaWykladow();
 	void setNazwa(string nazwa);
 	void dodajNowyWyklad(Wyklad* wyklad);
 	void usunWyklad(Wyklad* wyklad);
 private:
-	string Nazwa;
+    string Nazwa;
 	vector<Wyklad*> ListaWykladow;
 };
 

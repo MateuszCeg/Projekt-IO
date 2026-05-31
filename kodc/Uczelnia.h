@@ -35,8 +35,10 @@ public:
 	void usunStudenta(Student* student);
 	void dodajWykladowce(Wykladowca* wykladowca);
 	void usunWykladowce(Wykladowca* wykladowca);
-	void Zaloguj(string login, string haslo);
+    char Zaloguj(string login, string haslo);
 	void ZmianaHasla(string login, string stareHaslo, string noweHaslo);
+    Student* znajdzStudenta(string login);
+    Wykladowca* znajdzWykladowce(string login);
 private:
 	string Nazwa;
 	vector<Student*> ListaStudentow;

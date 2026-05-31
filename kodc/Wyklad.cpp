@@ -17,16 +17,20 @@
 #include "Student.h"
 
 
-#include <iostream>
-#include <algorithm> // Wymagane dla funkcji find()
+#include <algorithm>
 
 Wyklad::Wyklad(string nazwa, Wydzial* wydzial) {
     this->Nazwa = nazwa;
     this->wydzial = wydzial;
-    wydzial->dodajNowyWyklad(this);
+    this->Haslo = "";
+    if (this->wydzial!=nullptr)
+        wydzial->dodajNowyWyklad(this);
 }
 
 Wyklad::~Wyklad() {
+    if (this->wydzial!=nullptr)
+        wydzial->usunWyklad(this);
+
     for(Student* student: this->ListaStudentow){
         student->usunWyklad(this);
     }
@@ -60,84 +64,67 @@ Wydzial* Wyklad::getWydzial() {
     return this->wydzial;
 }
 
+string Wyklad::getHaslo() {
+    return this->Haslo;
+}
+
 void Wyklad::setNazwa(string nazwa) {
     this->Nazwa = nazwa;
 }
 
-void Wyklad::dodajStudenta(Student* student) {
-    for (Student* stud: this->ListaStudentow)
-    {
-        if (stud == student){
-            cout<<"Student ma juz przypisany ten wyklad." << endl;
-            return;
-        }
-    }
+void Wyklad::setHaslo(string haslo) {
+    this->Haslo = haslo;
+}
 
-    this->ListaStudentow.push_back(student);
-    student->dodajDoWykladu(this);
+void Wyklad::setWydzial(Wydzial* wydzial){
+    this->wydzial = wydzial;
+}
+
+void Wyklad::dodajStudenta(Student* student) {
+    auto it = find(this->ListaStudentow.begin(), this->ListaStudentow.end(), student);
+    if (it == this->ListaStudentow.end()) {
+        this->ListaStudentow.push_back(student);
+        student->dodajDoWykladu(this);
+    }
 }
 
 void Wyklad::usunStudenta(Student* student) {
-    for (Student* stud: this->ListaStudentow)
-    {
-        if (stud == student){
-            student->usunWyklad(this);
-            this->ListaStudentow.erase(find(this->ListaStudentow.begin(), this->ListaStudentow.end(), student));
-            return;
-        }
+    auto it = find(this->ListaStudentow.begin(), this->ListaStudentow.end(), student);
+    if (it != this->ListaStudentow.end()) {
+        this->ListaStudentow.erase(it);
     }
 
-    cout<<"Student nie ma przypisanego tego wykladu." << endl;
 }
 
 void Wyklad::dodajWykladowce(Wykladowca* wykladowca) {
-    for (Wykladowca* wykl: this->ListaWykladowcow)
-    {
-        if (wykl == wykladowca){
-            cout<<"Wykladowca ma juz przypisany ten wyklad." << endl;
-            return;
-        }
+    auto it = find(this->ListaWykladowcow.begin(), this->ListaWykladowcow.end(), wykladowca);
+    if (it == this->ListaWykladowcow.end()) {
+        this->ListaWykladowcow.push_back(wykladowca);
+        wykladowca->dodajDoWykladu(this);
     }
-
-    this->ListaWykladowcow.push_back(wykladowca);
-    wykladowca->dodajDoWykladu(this);
 }
 
 void Wyklad::usunWykladowce(Wykladowca* wykladowca) {
-    for (Wykladowca* wykl: this->ListaWykladowcow)
-    {
-        if (wykl == wykladowca){
-            wykladowca->usunWyklad(this);
-            this->ListaWykladowcow.erase(find(this->ListaWykladowcow.begin(), this->ListaWykladowcow.end(), wykladowca));
-            return;
-        }
+    auto it = find(this->ListaWykladowcow.begin(), this->ListaWykladowcow.end(), wykladowca);
+    if (it != this->ListaWykladowcow.end()) {
+        this->ListaWykladowcow.erase(it);
     }
 
-    cout<<"Wykladowca nie ma przypisanego tego wykladu." << endl;
 }
 
-void Wyklad::dodajMaterial(Materialy* materialy) {
-    for (Materialy* mat: this->ListaMaterialow)
-    {
-        if (mat == materialy){
-            cout<<"Materialy zostaly juz dodane." << endl;
-            return;
-        }
+void Wyklad::dodajMaterialy(Materialy* materialy) {
+    auto it = find(this->ListaMaterialow.begin(), this->ListaMaterialow.end(), materialy);
+    if (it == this->ListaMaterialow.end()) {
+        this->ListaMaterialow.push_back(materialy);
     }
-
-    this->ListaMaterialow.push_back(materialy);
 }
 
-void Wyklad::usunMaterial(Materialy* materialy) {
-    for (Materialy* mat: this->ListaMaterialow)
-    {
-        if (mat == materialy){
-            this->ListaMaterialow.erase(find(this->ListaMaterialow.begin(), this->ListaMaterialow.end(), materialy));
-            delete materialy;
-            return;
-        }
+void Wyklad::usunMaterialy(Materialy* materialy) {
+    auto it = find(this->ListaMaterialow.begin(), this->ListaMaterialow.end(), materialy);
+    if (it != this->ListaMaterialow.end()) {
+        Materialy* doUsuniecia = *it;
+        this->ListaMaterialow.erase(it);
+        delete doUsuniecia;
     }
-
-    cout<<"Nie znaleziono materialow." << endl;
 }
 

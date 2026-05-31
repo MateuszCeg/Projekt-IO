@@ -14,6 +14,7 @@
 #define _WYKLADOWCA_H
 
 #include "User.h"
+#include "Wydzial.h"
 
 #include <string>
 #include <vector>
@@ -33,6 +34,7 @@ public:
 	void setImie(string imie);
 	void setNazwisko(string nazwisko);
 	void dodajDoWykladu(Wyklad* wyklad);
+    Wyklad* utworzWyklad(Wydzial* wydzial, string nazwa);
 	void usunWyklad(Wyklad* wyklad);
 	vector<Materialy*> przegladajMaterialy(Wyklad* wyklad);
 	void dodajMaterialy(Wyklad* wyklad, Materialy* material);

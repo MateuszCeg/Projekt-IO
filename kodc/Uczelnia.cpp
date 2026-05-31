@@ -10,11 +10,15 @@
 //
 
 #include "Student.h"
+#include "Materialy.h"
 #include "Wykladowca.h"
 #include "Uczelnia.h"
 #include "Wydzial.h"
 #include "Wyklad.h"
+#include "testy.h"
+
 #include <iostream>
+#include <algorithm>
 
 Uczelnia::Uczelnia(string nazwa, vector<Wydzial*> wydzialy) {
     this->Nazwa = nazwa;
@@ -24,6 +28,12 @@ Uczelnia::Uczelnia(string nazwa, vector<Wydzial*> wydzialy) {
 Uczelnia::~Uczelnia() {
     for (Wydzial* wydzial : this->ListaWydzialow) {
         delete wydzial;
+    }
+    for (Student* student : this->ListaStudentow) {
+        delete student;
+    }
+    for (Wykladowca* wykladowca : this->ListaWykladowcow) {
+        delete wykladowca;
     }
 }
 
@@ -48,77 +58,83 @@ void Uczelnia::setNazwa(string nazwa) {
 }
 
 void Uczelnia::dodajStudenta(Student* student) {
-    for (Student* stud: this->ListaStudentow)
-    {
-        if (stud == student){
-            cout<<"Student jest juz przypisany do uczelni." << endl;
-            return;
-        }
+    auto it = find(this->ListaStudentow.begin(), this->ListaStudentow.end(), student);
+    if (it == this->ListaStudentow.end()) {
+        this->ListaStudentow.push_back(student);
     }
-
-    this->ListaStudentow.push_back(student);
 }
 
 void Uczelnia::usunStudenta(Student* student) {
     //usuniecie jako wykreslenie z listy uczelni / wywolanie destruktora
 
-    for (Student* stud: this->ListaStudentow)
-    {
-        if (stud == student){
-            this->ListaStudentow.erase(find(this->ListaStudentow.begin(), this->ListaStudentow.end(), stud));
-            delete stud;
-            return;
-        }
+    auto it = find(this->ListaStudentow.begin(), this->ListaStudentow.end(), student);
+    if (it != this->ListaStudentow.end()) {
+        Student* doUsuniecia = *it;
+        this->ListaStudentow.erase(it);
+        delete doUsuniecia;
     }
 }
 
 void Uczelnia::dodajWykladowce(Wykladowca* wykladowca) {
-    for (Wykladowca* wyk: this->ListaWykladowcow)
-    {
-        if (wyk == wykladowca){
-            this->ListaWykladowcow.erase(find(this->ListaWykladowcow.begin(), this->ListaWykladowcow.end(), wyk));
-            cout<<"Wykladowca jest juz przypisany do uczelni." << endl;
-            return;
-        }
+    auto it = find(this->ListaWykladowcow.begin(), this->ListaWykladowcow.end(), wykladowca);
+    if (it == this->ListaWykladowcow.end()) {
+        this->ListaWykladowcow.push_back(wykladowca);
     }
-
-    this->ListaWykladowcow.push_back(wykladowca);
 }
 
 void Uczelnia::usunWykladowce(Wykladowca* wykladowca) {
     //usuniecie jako wykreslenie z listy uczelni / wywolanie destruktora
-    for (Wykladowca* wyk: this->ListaWykladowcow)
-    {
-        if (wyk == wykladowca){
-            delete wyk;
-            return;
-        }
+
+    auto it = find(this->ListaWykladowcow.begin(), this->ListaWykladowcow.end(), wykladowca);
+    if (it != this->ListaWykladowcow.end()) {
+        Wykladowca* doUsuniecia = *it;
+        this->ListaWykladowcow.erase(it);
+        delete doUsuniecia;
     }
 }
 
-void Uczelnia::Zaloguj(string login, string haslo) {
+Student* Uczelnia::znajdzStudenta(string login){
+    for (Student* s : this->ListaStudentow) {
+        if (s->getLogin() == login) {
+            return s;
+        }
+    }
+    return nullptr;
+}
+
+Wykladowca* Uczelnia::znajdzWykladowce(string login){
+    for (Wykladowca* w : this->ListaWykladowcow) {
+        if (w->getLogin() == login) {
+            return w;
+        }
+    }
+    return nullptr;
+}
+
+char Uczelnia::Zaloguj(string login, string haslo) {
     for (Student* s : this->ListaStudentow) {
         if (s->getLogin() == login && s->getHaslo() == haslo) {
             cout << "Zalogowano pomyslnie jako Student: " << login << endl;
-            return;
+            return 's';
         }
     }
 
     for (Wykladowca* w : this->ListaWykladowcow) {
         if (w->getLogin() == login && w->getHaslo() == haslo) {
-            std::cout << "Zalogowano pomyslnie jako Wykladowca: " << login << endl;
-            return;
+            cout << "Zalogowano pomyslnie jako Wykladowca: " << login << endl;
+            return 'w';
         }
     }
     
     cout << "Blad logowania."<< endl;
+    return 'f';
 }
 
 void Uczelnia::ZmianaHasla(string login, string stareHaslo, string noweHaslo) {
     for (Student* s : this->ListaStudentow) {
         if (s->getLogin() == login && s->getHaslo() == stareHaslo) {
             s->setHaslo(noweHaslo);
-            std::cout << "Haslo studenta " << login << " zostalo zmienione pomyslnie." << endl;
+            cout << "Haslo studenta " << login << " zostalo zmienione pomyslnie." << endl;
             return;
         }
     }
@@ -126,17 +142,21 @@ void Uczelnia::ZmianaHasla(string login, string stareHaslo, string noweHaslo) {
     for (Wykladowca* w : this->ListaWykladowcow) {
         if (w->getLogin() == login && w->getHaslo() == stareHaslo) {
              w->setHaslo(noweHaslo);
-            std::cout << "Haslo wykladowcy " << login << " zostalo zmienione pomyslnie." << endl;
+            cout << "Haslo wykladowcy " << login << " zostalo zmienione pomyslnie." << endl;
             return;
         }
     }
 
-    cout << "Blad zmiany hasla: Niewlasciwe dane uwierzytelniajace.";
+    cout << "Blad zmiany hasla: Niewlasciwe dane uwierzytelniajace." << endl;;
 }
 
 ////////////////////////////
 
+
+
 int main(){
+    cout << "=== 1. INICJALIZACJA SYSTEMU ===" << endl;
+
     // Wydziały
     Wydzial* wydzInformatyki = new Wydzial("Wydzial Informatyki");
     Wydzial* wydzMatematyki = new Wydzial("Wydzial Matematyki");
@@ -146,73 +166,70 @@ int main(){
     wszystkieWydzialy.push_back(wydzMatematyki);
 
     // Uczelnia
-    Uczelnia* uczelnia = new Uczelnia("UMCS", wszystkieWydzialy);
+    Uczelnia* uczelnia = new Uczelnia("Uniwersytet Marii Curie-Sklodowskiej", wszystkieWydzialy);
     cout << "Utworzono uczelnie: " << uczelnia->getNazwa() << endl;
-
-    // Wyklady
-    Wyklad* wykInf1 = new Wyklad("Programowanie C++", wydzInformatyki);
-    Wyklad* wykInf2 = new Wyklad("Bazy Danych", wydzInformatyki);
-    Wyklad* wykInf3 = new Wyklad("Sieci Komputerowe", wydzInformatyki);
-
-
-    Wyklad* wykMat1 = new Wyklad("Analiza Matematyczna", wydzMatematyki);
-    Wyklad* wykMat2 = new Wyklad("Algebra Liniowa", wydzMatematyki);
-    Wyklad* wykMat3 = new Wyklad("Rachunek Prawdopodobienstwa", wydzMatematyki);
 
     // Studenci
     Student* s1 = new Student("Jan", "Kowalski", 100111, "haslo1");
     Student* s2 = new Student("Anna", "Nowak", 100222, "haslo2");
-    Student* s3 = new Student("Piotr", "Wisniewski", 100333, "haslo3");
-    Student* s4 = new Student("Katarzyna", "Zielinska", 100444, "haslo4");
-
     uczelnia->dodajStudenta(s1);
     uczelnia->dodajStudenta(s2);
-    uczelnia->dodajStudenta(s3);
-    uczelnia->dodajStudenta(s4);
 
     // Wykładowcy
     Wykladowca* w1 = new Wykladowca("Alan", "Turing", "aturing", "tajne123");
     Wykladowca* w2 = new Wykladowca("Ada", "Lovelace", "alovelace", "tajne456");
-
     uczelnia->dodajWykladowce(w1);
     uczelnia->dodajWykladowce(w2);
 
-    // Przypisanie Wykładowców
-    wykInf1->dodajWykladowce(w1);
-    wykInf2->dodajWykladowce(w1);
-    wykMat1->dodajWykladowce(w2);
+    cout << "Zarejestrowano studentow i wykladowcow.\n" << endl;
 
-    for(Wykladowca* wyk : wykInf1->getListaWykladowcow()){
-        cout<< "Prowadzacy: " << wyk->getImie() << " " << wyk->getNazwisko() << endl;
+    cout << "=== 2. TWORZENIE WYKLADOW ===" << endl;
+    Wyklad* wykInf1 = w1->utworzWyklad(wydzInformatyki, "Programowanie C++");
+    wykInf1->setHaslo("cpp2026");
+    cout << "Wykladowca " << w1->getNazwisko() << " utworzyl wyklad: " << wykInf1->getNazwa() << " (Z HASLEM)." << endl;
+
+    Wyklad* wykMat1 = w2->utworzWyklad(wydzMatematyki, "Analiza Matematyczna");
+    cout << "Wykladowca " << w2->getNazwisko() << " utworzyl wyklad: " << wykMat1->getNazwa() << " (BEZ HASLA)." << endl;
+
+
+    cout << "\n=== 3. DODAWANIE MATERIALOW ===" << endl;
+    w1->dodajMaterialy(wykInf1, new Materialy("Wstep do C++", "Prezentacja PDF"));
+    w1->dodajMaterialy(wykInf1, new Materialy("Zadanie 1: Klasy", "Plik TXT"));
+    w1->dodajMaterialy(wykInf1, new Materialy("Kolokwium próbne", "Skrypt .sh"));
+
+    w2->dodajMaterialy(wykMat1, new Materialy("Calki - Teoria", "Dokument PDF"));
+    w2->dodajMaterialy(wykMat1, new Materialy("Zestaw zadan", "Plik DOCX"));
+
+    cout << "Pomyslnie przypisano materialy do kursow.\n" << endl;
+
+
+    cout << "=== 4. DOLACZANIE DO WYKLADOW ===" << endl;
+    cout << "Student " << s1->getImie() << " probuje dolaczyc do 'Programowanie C++' podajac zle haslo:" << endl;
+    s1->dolaczDoWykladu(wykInf1, "zle_haslo");
+
+    cout << "\nStudent " << s1->getImie() << " probuje dolaczyc podajac prawidlowe haslo:" << endl;
+    s1->dolaczDoWykladu(wykInf1, "cpp2026");
+
+    wykMat1->dodajStudenta(s2);
+    cout << "Studentka " << s2->getImie() << " zostala recznie zapisana na wyklad z Analizy.\n" << endl;
+
+
+    cout << "=== 5. PREZENTACJA WYNIKOW ===" << endl;
+    cout << "Materialy dostepne dla studenta " << s1->getImie() << " na wykladzie " << wykInf1->getNazwa() << ":" << endl;
+    for(Materialy* mat : s1->przegladajMaterialy(wykInf1)){
+        cout << " -> " << mat->getNazwa() << " [" << mat->getRodzaj() << "]" << endl;
     }
 
-    // Przypisanie Studentów
-    wykInf1->dodajStudenta(s1);
-    wykInf1->dodajStudenta(s2);
 
-    wykInf2->dodajStudenta(s2);
-    wykInf2->dodajStudenta(s3);
+    cout << "\n=== 6. URUCHOMIENIE TESTOW JEDNOSTKOWYCH ===" << endl;
+    testy();
 
-    wykMat1->dodajStudenta(s1);
-    wykMat1->dodajStudenta(s4);
-
-    for(Student* stud : wykInf1->getListaStudentow()){
-        cout<< "Student: " << stud->getImie() << " " << stud->getNazwisko() << endl;
+    cout << "\n=== 7. URUCHOMIENIE GLOWNEGO MENU ===" << endl;
+    while(1){
+        petla(uczelnia);
     }
-
-    // Logowanie
-    uczelnia->Zaloguj("100111", "haslo1");    // Logowanie s1 (zwróci sukces)
-    uczelnia->Zaloguj("aturing", "tajne123"); // Logowanie w1 (zwróci sukces)
-    uczelnia->Zaloguj("100222", "zlehaslo");  // Bledne haslo
 
     delete uczelnia;
-
-
-    cout << "Program zakonczyl dzialanie pomyslnie." << endl;
-
-    int k;
-
-    cin >> k;
 
     return 0;
 }
