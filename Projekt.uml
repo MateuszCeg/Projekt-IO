@@ -5986,7 +5986,7 @@
 <XPD:REF name="Model">R8kM7Tp31keSy/68qpmbmwAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="MI3PzZHNHEK2mrJupY1aFgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="NUfqlZKDmUWe6Ks4yug2/wAA">
-<XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="FontStyle" type="integer">3</XPD:ATTR>
 <XPD:ATTR name="Text" type="string">User</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="b+GE4maXPk+t8RvwZOKwlAAA">
@@ -7443,6 +7443,7 @@
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[8]" type="UMLClass" guid="R8kM7Tp31keSy/68qpmbmwAA">
 <XPD:ATTR name="Name" type="string">User</XPD:ATTR>
+<XPD:ATTR name="IsAbstract" type="boolean">True</XPD:ATTR>
 <XPD:REF name="Namespace">H24KZgRZcEKwHiJHZ76mxAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">WcFGHcW2Mke0emWBJ4lHvQAA</XPD:REF>

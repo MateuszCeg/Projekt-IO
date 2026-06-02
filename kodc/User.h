@@ -19,13 +19,13 @@ using namespace std;
 
 class User {
 public:
-	User(string login, string haslo);
-	~User();
-	string getLogin();
-	string getHaslo();
-	void setHaslo(string haslo);
+    User(string login, string haslo);
+    ~User();
+    string getLogin();
+    string getHaslo();
+    void setHaslo(string haslo);
 private:
-	string Login;
+    string Login;
 	string Haslo;
 };
 

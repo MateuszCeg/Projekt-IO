@@ -166,7 +166,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Xw+uB6S9uk6GATGIHhSW5wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="KVuMgVFO1UW7jrevEufpdAAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Zarzadzanie kursem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Zarzadzanie wykladem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="okFlB+29vUWP4xg4weGSyAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -709,15 +709,15 @@
 <XPD:OBJ name="OwnedViews[20]" type="UMLUseCaseView" guid="HgTdrqRMjEyYVhsgYZ3F6wAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">652</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">336</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">132</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">640</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">332</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">154</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">45</XPD:ATTR>
 <XPD:REF name="Model">rgYzMeVjwkmScgXbSW9y9wAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="xYVmw21mmEWo+XD+70767QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="xtSYC1ApyU2yK8I+J7E5WwAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Przeglad kursu</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Przeglad wykladu</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="b0+ZhEKLqEGG48+RYawkyAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -742,7 +742,7 @@
 <XPD:OBJ name="OwnedViews[21]" type="UMLAssociationView" guid="zAN9LuiqakO9UBdjTgHSZgAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">552,376;652,365</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">552,375;640,364</XPD:ATTR>
 <XPD:REF name="Model">Mk2DXlYbLUGoaZutbZ8CygAA</XPD:REF>
 <XPD:REF name="Head">HgTdrqRMjEyYVhsgYZ3F6wAA</XPD:REF>
 <XPD:REF name="Tail">u4/r2vRx2U2jwOh0AcsBawAA</XPD:REF>
@@ -826,7 +826,7 @@
 <XPD:OBJ name="OwnedViews[22]" type="UMLExtendView" guid="mlU4ijvxwEmv1D4imjs5jwAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">721,308;719,336</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">721,308;718,332</XPD:ATTR>
 <XPD:REF name="Model">IF0SU+iO0UGgOQ8BdZlhrQAA</XPD:REF>
 <XPD:REF name="Head">HgTdrqRMjEyYVhsgYZ3F6wAA</XPD:REF>
 <XPD:REF name="Tail">yvhOvn+NLEi/G6fo30SFVwAA</XPD:REF>
@@ -852,7 +852,7 @@
 <XPD:OBJ name="OwnedViews[23]" type="UMLExtendView" guid="rMHHfFVUDEqxC04I4WzfCwAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">716,412;717,380</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">715,412;716,376</XPD:ATTR>
 <XPD:REF name="Model">S8aOFG845k2N8m8ikfzNfAAA</XPD:REF>
 <XPD:REF name="Head">HgTdrqRMjEyYVhsgYZ3F6wAA</XPD:REF>
 <XPD:REF name="Tail">WQp6N8mKfk+OWCdclOUrlAAA</XPD:REF>
@@ -878,15 +878,15 @@
 <XPD:OBJ name="OwnedViews[24]" type="UMLUseCaseView" guid="qjsjMWT+uUiaVKhHHvWsfQAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">808</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">348</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">145</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">796</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">352</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">166</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">45</XPD:ATTR>
 <XPD:REF name="Model">dV7RSrIF+UG+AC9hpaiPvAAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Im/Q6gBpkUupTA4Af0cXuAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="56VW0PkdrEG1jP3zCa8xKQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Tworzenie kursu</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Tworzenie wykladu</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="yqifIqTn/UeL+cwwKunfXgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -911,7 +911,7 @@
 <XPD:OBJ name="OwnedViews[25]" type="UMLExtendView" guid="ZJyAyM/5K02MeR4XzFlh4gAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">952,370;1016,370</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">961,373;1016,372</XPD:ATTR>
 <XPD:REF name="Model">TRX+KVPIL0OAShhCRyxKHQAA</XPD:REF>
 <XPD:REF name="Head">9v1KfPUkME6LybyCyrsT8gAA</XPD:REF>
 <XPD:REF name="Tail">qjsjMWT+uUiaVKhHHvWsfQAA</XPD:REF>
@@ -1621,7 +1621,7 @@
 <XPD:REF name="Outgoings[0]">pKaX6yOCPkS64egI/Xv35AAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Subvertices[1]" type="UMLActionState" guid="vR5HuMSZCkuiDetUxiWXYwAA">
-<XPD:ATTR name="Name" type="string">Wpisz nazwe kursu</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Wpisz nazwe wykladu</XPD:ATTR>
 <XPD:REF name="ContainerState">1K4zfxTcT0ij7j1kzfTLJAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">BBQoQLtGDUagLtA+krkzfwAA</XPD:REF>
@@ -1632,7 +1632,7 @@
 <XPD:REF name="Incomings[1]">mfDNvt4lGECGCumsvS8fFwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Subvertices[2]" type="UMLActionState" guid="+V3ORi/siU2EFOc1nqAMJQAA">
-<XPD:ATTR name="Name" type="string">Sprawdz liste kursow</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Sprawdz liste wykladow</XPD:ATTR>
 <XPD:REF name="ContainerState">1K4zfxTcT0ij7j1kzfTLJAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">jHS8YxbtQ0KqernCfHK39AAA</XPD:REF>
@@ -1733,12 +1733,12 @@
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">372</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">232</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">146</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">148</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">40</XPD:ATTR>
 <XPD:REF name="Model">vR5HuMSZCkuiDetUxiWXYwAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="X2pX/oGb4UaPsxgNyudpEAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="LaSl0N8CmkifTexlFj2r4AAA">
-<XPD:ATTR name="Text" type="string">Wpisz nazwe kursu</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Wpisz nazwe wykladu</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="afmCW68Hf06FwBGHJaXFlQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1781,12 +1781,12 @@
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">372</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">444</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">145</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">160</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">40</XPD:ATTR>
 <XPD:REF name="Model">+V3ORi/siU2EFOc1nqAMJQAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="WBYSwQD3w0qpZxpHYa/adAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="tZ4kGSdR4k6JDcYKSQ3gCgAA">
-<XPD:ATTR name="Text" type="string">Sprawdz liste kursow</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Sprawdz liste wykladow</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="3iYKDCbxHEueTueq/Pa3owAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1800,7 +1800,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">444,271;444,444</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">446,271;451,444</XPD:ATTR>
 <XPD:REF name="Model">Nws+LxYbM0mP10Muxcy3FgAA</XPD:REF>
 <XPD:REF name="Head">jHS8YxbtQ0KqernCfHK39AAA</XPD:REF>
 <XPD:REF name="Tail">BBQoQLtGDUagLtA+krkzfwAA</XPD:REF>
@@ -1837,7 +1837,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">516,464;608,466</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">531,464;608,466</XPD:ATTR>
 <XPD:REF name="Model">k75IDEeKPkWwWDvpz8IKKAAA</XPD:REF>
 <XPD:REF name="Head">anZJZ8UeGEypctP7Nf/nTQAA</XPD:REF>
 <XPD:REF name="Tail">jHS8YxbtQ0KqernCfHK39AAA</XPD:REF>
@@ -1845,7 +1845,7 @@
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
 <XPD:ATTR name="Alpha" type="real">-1,48499943575782</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">30,0665927567458</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">[Czy kurs istnieje?]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[Czy wyklad istnieje?]</XPD:ATTR>
 <XPD:REF name="Model">k75IDEeKPkWwWDvpz8IKKAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="EdgeLabelView" guid="Xg6dpint90K0SS6pzUhOLgAA">
@@ -2000,7 +2000,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">770,448;768,252;517,251</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">770,448;768,252;519,251</XPD:ATTR>
 <XPD:REF name="Model">mfDNvt4lGECGCumsvS8fFwAA</XPD:REF>
 <XPD:REF name="Head">BBQoQLtGDUagLtA+krkzfwAA</XPD:REF>
 <XPD:REF name="Tail">dPgsP61pokKpw5xKonYTUgAA</XPD:REF>
@@ -2047,7 +2047,7 @@
 <XPD:REF name="Views[3]">DlnY3wVMjEaiw73H7Hp0CgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Transitions[2]" type="UMLTransition" guid="k75IDEeKPkWwWDvpz8IKKAAA">
-<XPD:ATTR name="Name" type="string">[Czy kurs istnieje?]</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">[Czy wyklad istnieje?]</XPD:ATTR>
 <XPD:REF name="StateMachine">OVxaRdzkOkCG+qdgJAOb7AAA</XPD:REF>
 <XPD:REF name="Source">+V3ORi/siU2EFOc1nqAMJQAA</XPD:REF>
 <XPD:REF name="Target">K/07wjbmMkiUNSnJimxWHwAA</XPD:REF>
@@ -2130,7 +2130,7 @@
 <XPD:REF name="Associations[1]">rbEgTL8c1k+YViH+yB1DPQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[5]" type="UMLUseCase" guid="OARklX5S+E+9IZnOUSX4pAAA">
-<XPD:ATTR name="Name" type="string">Zarzadzanie kursem</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Zarzadzanie wykladem</XPD:ATTR>
 <XPD:REF name="Namespace">A+IFG3M3PkuFEVtCf5U/vgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">9v1KfPUkME6LybyCyrsT8gAA</XPD:REF>
@@ -2266,7 +2266,7 @@
 <XPD:REF name="Incomings[0]">nn0raA6jBkqyZqmi9WuVLgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Subvertices[14]" type="UMLActionState" guid="njWecNw1GE6h3Ui/pvqo8QAA">
-<XPD:ATTR name="Name" type="string">Utowrzenie nowego wykladu</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Utworzenie nowego wykladu</XPD:ATTR>
 <XPD:REF name="ContainerState">JmDF+Wi6tkWaap5H/K6w3wAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">8gtf8vXczESMyL50twfG4AAA</XPD:REF>
@@ -2307,7 +2307,7 @@
 <XPD:REF name="Incomings[0]">F29gEmGs30qzoSZCFRtHBgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Subvertices[18]" type="UMLActionState" guid="ZR7rGkP82EGvc/uwPX4IxAAA">
-<XPD:ATTR name="Name" type="string">Wybierz czy dodać haslo [T/N]</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Wybierz czy dodac haslo [T/N]</XPD:ATTR>
 <XPD:REF name="ContainerState">JmDF+Wi6tkWaap5H/K6w3wAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">iVzdZHPAJ02ZJrlFjopVFAAA</XPD:REF>
@@ -2517,7 +2517,7 @@
 <XPD:REF name="Model">njWecNw1GE6h3Ui/pvqo8QAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="8d3LpieyxEGI/i+GPleWTAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="g4f1WPLMfUC6hpzMG1nqGAAA">
-<XPD:ATTR name="Text" type="string">Utowrzenie nowego wykladu</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Utworzenie nowego wykladu</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="DU72CR9wE0CrADnBHuk1UgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -2662,7 +2662,7 @@
 <XPD:REF name="Model">ZR7rGkP82EGvc/uwPX4IxAAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="ezhH7m0110Gd+iq72jFGpQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="z36IoJB+FkKdi6BgGor4dgAA">
-<XPD:ATTR name="Text" type="string">Wybierz czy dodać haslo [T/N]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Wybierz czy dodac haslo [T/N]</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="wCNYboX8rE24rV2z2nCdbwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -3116,7 +3116,7 @@
 <XPD:REF name="Incomings[0]">r6/Jjfr5kEqnKEwykgPlewAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Subvertices[7]" type="UMLActionState" guid="NMEbBy36mUec352w+FFIRAAA">
-<XPD:ATTR name="Name" type="string">Wpisz nazwe kursu</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Wpisz nazwe wykladu</XPD:ATTR>
 <XPD:REF name="ContainerState">RlruAtzo40uNlIGZafj1kAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">EdMqiNl1CUWP+w91M9h4EgAA</XPD:REF>
@@ -3127,7 +3127,7 @@
 <XPD:REF name="Incomings[1]">ScJtK1eKWEmzeLMruF6y+gAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Subvertices[8]" type="UMLActionState" guid="Kow/VB9RVk+HktXRPcP3QQAA">
-<XPD:ATTR name="Name" type="string">Przesukaj liste kursów</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Przesukaj liste wykladow</XPD:ATTR>
 <XPD:REF name="ContainerState">RlruAtzo40uNlIGZafj1kAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">MvYopvxMOkuTPrKfjyhrmwAA</XPD:REF>
@@ -3188,7 +3188,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">224</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">212</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">260</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">20</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">20</XPD:ATTR>
@@ -3229,7 +3229,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">243,269;284,270</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">231,269;264,270</XPD:ATTR>
 <XPD:REF name="Model">AMM6GTPq3022ufiVir1rbgAA</XPD:REF>
 <XPD:REF name="Head">EdMqiNl1CUWP+w91M9h4EgAA</XPD:REF>
 <XPD:REF name="Tail">LdGx1KGUz0WtDmnkE+k1kwAA</XPD:REF>
@@ -3494,14 +3494,14 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">284</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">264</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">252</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">133</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">148</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">40</XPD:ATTR>
 <XPD:REF name="Model">NMEbBy36mUec352w+FFIRAAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="2GLUIGIGi0Go6QjusaeFiAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="YUv8N9wqbk21asmkbAJoRAAA">
-<XPD:ATTR name="Text" type="string">Wpisz nazwe kursu</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Wpisz nazwe wykladu</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="taxTWUnc6UGE0nPKmXFb9gAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -3515,14 +3515,14 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">272</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">420</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">150</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">260</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">416</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">165</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">40</XPD:ATTR>
 <XPD:REF name="Model">Kow/VB9RVk+HktXRPcP3QQAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="5JusOEUUeUWvIgnanh6oHgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="7bJwWw+PiUmULuwihsX5xQAA">
-<XPD:ATTR name="Text" type="string">Przesukaj liste kursów</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Przesukaj liste wykladow</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="EPVZDtKdhUqHtxOF/OJTxQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -3536,7 +3536,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">448</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">464</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">424</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">30</XPD:ATTR>
@@ -3546,7 +3546,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">350,291;347,420</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">338,291;341,416</XPD:ATTR>
 <XPD:REF name="Model">C7nQ+7c1HkO2OGdRzGQQsQAA</XPD:REF>
 <XPD:REF name="Head">MvYopvxMOkuTPrKfjyhrmwAA</XPD:REF>
 <XPD:REF name="Tail">EdMqiNl1CUWP+w91M9h4EgAA</XPD:REF>
@@ -3573,15 +3573,15 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">421,438;448,438</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">424,437;464,438</XPD:ATTR>
 <XPD:REF name="Model">T5Tv/nJpXECe2pReLFzFbgAA</XPD:REF>
 <XPD:REF name="Head">js0XDkUXvEersijU8ZdQSwAA</XPD:REF>
 <XPD:REF name="Tail">MvYopvxMOkuTPrKfjyhrmwAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="EdgeLabelView" guid="2v6ao/dLdUqPWVzL+oYBQQAA">
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Alpha" type="real">-1,50444832905021</XPD:ATTR>
-<XPD:ATTR name="Distance" type="real">30,1496268633627</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">[Czy kurs istnieje?]</XPD:ATTR>
+<XPD:ATTR name="Alpha" type="real">-1,60526442978656</XPD:ATTR>
+<XPD:ATTR name="Distance" type="real">29,0172362570938</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[Czy wyklad istnieje?]</XPD:ATTR>
 <XPD:REF name="Model">T5Tv/nJpXECe2pReLFzFbgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="EdgeLabelView" guid="nnGmRnUCYU2AqM483bHwXAAA">
@@ -3601,7 +3601,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">472,424;468,276;416,274</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">488,424;488,272;411,271</XPD:ATTR>
 <XPD:REF name="Model">ScJtK1eKWEmzeLMruF6y+gAA</XPD:REF>
 <XPD:REF name="Head">EdMqiNl1CUWP+w91M9h4EgAA</XPD:REF>
 <XPD:REF name="Tail">js0XDkUXvEersijU8ZdQSwAA</XPD:REF>
@@ -3629,7 +3629,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">10</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">497,437;560,436;560,312;600,313</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">513,437;560,436;560,312;600,313</XPD:ATTR>
 <XPD:REF name="Model">WYyzRryZJEq3pMRpxQEnOwAA</XPD:REF>
 <XPD:REF name="Head">5gywoWvomE2vkMyxUs1m7AAA</XPD:REF>
 <XPD:REF name="Tail">js0XDkUXvEersijU8ZdQSwAA</XPD:REF>
@@ -3740,7 +3740,7 @@
 <XPD:REF name="Views[3]">fGKFV26PpkqgVEOp0UVTugAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Transitions[8]" type="UMLTransition" guid="T5Tv/nJpXECe2pReLFzFbgAA">
-<XPD:ATTR name="Name" type="string">[Czy kurs istnieje?]</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">[Czy wyklad istnieje?]</XPD:ATTR>
 <XPD:REF name="StateMachine">IgjJ3arIGkuVadp93oF14wAA</XPD:REF>
 <XPD:REF name="Source">Kow/VB9RVk+HktXRPcP3QQAA</XPD:REF>
 <XPD:REF name="Target">7hkA1riz0UK5NZWjPlafxQAA</XPD:REF>
@@ -4729,7 +4729,7 @@
 <XPD:REF name="Views[3]">yGGI/1ZAAUCVXzUYllTdWAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[21]" type="UMLUseCase" guid="rgYzMeVjwkmScgXbSW9y9wAA">
-<XPD:ATTR name="Name" type="string">Przeglad kursu</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Przeglad wykladu</XPD:ATTR>
 <XPD:REF name="Namespace">A+IFG3M3PkuFEVtCf5U/vgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">HgTdrqRMjEyYVhsgYZ3F6wAA</XPD:REF>
@@ -5468,7 +5468,7 @@
 <XPD:REF name="Views[3]">vsbJnv833UCHl5bcFiujuwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[25]" type="UMLUseCase" guid="dV7RSrIF+UG+AC9hpaiPvAAA">
-<XPD:ATTR name="Name" type="string">Tworzenie kursu</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Tworzenie wykladu</XPD:ATTR>
 <XPD:REF name="Namespace">A+IFG3M3PkuFEVtCf5U/vgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">qjsjMWT+uUiaVKhHHvWsfQAA</XPD:REF>

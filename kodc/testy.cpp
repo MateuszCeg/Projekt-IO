@@ -151,8 +151,6 @@ void petla(Uczelnia* uczelnia1){
     cout << "Zaloguj się:" << endl;
 
     while(1){
-
-
         cin >> login >> haslo;
 
         switch (uczelnia1->Zaloguj(login, haslo)){
